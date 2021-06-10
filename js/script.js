@@ -184,10 +184,10 @@
     }
 
     $('.simple_timer').syotimer({
-        year: 2020,
-        month: 11,
-        day: 9,
-        hour: 20,
+        year: 2021,
+        month: 7,
+        day: 1,
+        hour: 0,
         minute: 30
     })
 

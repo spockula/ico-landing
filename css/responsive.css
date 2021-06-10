@@ -177,7 +177,7 @@
         font-size: 30px;
     }
     .dream-btn {
-        min-width: 160px;
+        /* min-width: 160px; */
         padding: 0 20px;
         font-size: 12px;
     }
@@ -192,7 +192,7 @@
         font-size: 36px;
     }
     .dream-btn {
-        min-width: 160px;
+        /* min-width: 160px; */
         padding: 0 20px;
         font-size: 12px;
     }
@@ -203,3 +203,7 @@
         width: 80%;
     }
 }
+
+
+
+

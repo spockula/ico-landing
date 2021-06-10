@@ -728,14 +728,39 @@ $(function () {
         // Stop the browser from submitting the form.
         e.preventDefault();
         // Serialize the form data.
-        var formData = $(form).serialize();
+        console.log('this is ut', $("#firstName").val())
+         // var formData = $(form).serialize();
+        
         // Submit the form using AJAX.
+        // $.ajax({
+        //         type: 'POST',
+        //         url: $(form).attr('action'),
+        //         data: formData
+        //     })
+        var person = {
+            firstName: $("#firstName").val(),
+            lastName: $("#lastName").val(),
+            email: $("email").val(),
+            amount:$("#amount").val(),
+            wallerAddress: $("#walletAddress").val(),
+            linkedInUrl: $("#linkedInUrl").val(),
+            countryOfOrigin: $("#countryOfOrigin").val(),
+            linkToTweet: $("#linkToTweet").val(),
+        }
+
+        // $('#target').html('sending..');
+
         $.ajax({
-                type: 'POST',
-                url: $(form).attr('action'),
-                data: formData
-            })
-            .done(function (response) {
+            url: 'https://lb.xendbit.net/api/ico/whitelist',
+            type: 'post',
+            dataType: 'json',
+            contentType: 'application/json',
+            'api-key': 'U2FsdGVkX18k5itQROOzEotUtBOLK4apPBmljl1wphduEXLbXkP08TjP6EVNDq+QzEVSAVgWOD/WMCkV1WQZ9Uo/3JXBrjz2RVdgNQmZ5sU=',
+            // success: function (data) {
+            //     $('#target').html(data.msg);
+            // },
+            data: JSON.stringify(person)
+        }).done(function (response) {
                 // Make sure that the formMessages div has the 'success' class.
                 $(formMessages).removeClass('error');
                 $(formMessages).addClass('success');
