@@ -5,6 +5,7 @@
   src: url('../fonts/cryptocoins.woff2') format('woff2'),
     url('../fonts/cryptocoins.woff') format('woff'),
     url('../fonts/cryptocoins.ttf') format('truetype');
+    font-display: swap;
 }
 
 /* .cc:before { */
