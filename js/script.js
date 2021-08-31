@@ -22,6 +22,18 @@
     // :: Cache
     $window.on('load', function () {
         let isCacheSupported = 'caches' in window;
+        let cacheName = 'niftyLanding'; 
+        let url = ['https://niftyrow.io/', 'https://niftyrow.io/fonts/fontawesome-webfont3e6e.woff2?v=4.7.0',
+        'https://niftyrow.io/fonts/classycb9b.ttf?fftrrv', 'https://niftyrow.io/js/script.js',
+         'https://niftyrow.io/img/bg-img/museum2D.png', 'https://niftyrow.io/js/plugins.js',
+         'https://niftyrow.io/css/bootstrap.min.css','https://www.google-analytics.com/analytics.js',
+         'https://niftyrow.io/js/jquery.min.js'
+        ];
+        caches.open(cacheName).then( cache => {
+        cache.addAll(url).then( () => {
+            console.log("Data cached ")
+            });
+        });
         
     });
 
