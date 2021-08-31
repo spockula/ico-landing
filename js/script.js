@@ -19,6 +19,12 @@
         }
     });
 
+    // :: Cache
+    $window.on('load', function () {
+        let isCacheSupported = 'caches' in window;
+        
+    });
+
 
     // :: Carousel Active Code
     if ($.fn.owlCarousel) {
@@ -145,10 +151,7 @@
         });
     }
 
-    // :: Wow Active Code
-    if ($window.width() > 767) {
-        new WOW().init();
-    }
+   
 
     // :: Jarallax Active JS
     if ($.fn.jarallax) {
