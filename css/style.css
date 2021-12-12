@@ -1251,6 +1251,29 @@ ol {
     }
 }
 
+.firstTitle {
+    text-align: center;
+    margin-left: 0px !important;
+}
+
+.secondTitle {
+    text-align: center;
+    margin-left: 0px !important;
+    display: flex;
+}
+
+@media (max-width: 900px){
+    .firstTitle {
+        text-align: center;
+        margin-left: 0px !important;
+    }
+    .secondTitle {
+        text-align: center;
+        margin-left: 0px !important;
+        display: block;
+    }
+}
+
 .welcome-content h2 {
     font-size: 52px;
     font-weight: 500;
@@ -2155,7 +2178,7 @@ p.artficial:before{
     display: block;
 }
 .embed-video {
-    max-width: 250px !important;
+    max-width: 300px !important;
     height: auto !important;
 }
 .service_icon{
